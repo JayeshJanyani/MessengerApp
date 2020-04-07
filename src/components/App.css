@@ -4,4 +4,31 @@ body,
   height: 100vh;
   background: #eeeeee;
   padding: 1em;
+  color:black
+}
+
+
+/*Messages*/
+
+.messages{
+  height: 440px;
+  overflow-y: scroll;
+}
+
+/* message form */
+ .message__form{
+  position: fixed !important;
+  bottom: 1em;
+  margin-left:320px !important;
+  margin-top: 100px;
+  left:0;
+  right:1em;
+  z-index:200;
+}
+
+/* message.js */
+.message__self{
+  border-left: 2px solid orange;
+  padding-left: 8px;
+  /* float: right; */
 }
