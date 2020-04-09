@@ -11,9 +11,15 @@ body,
 /*Messages*/
 
 .messages{
-  height: 440px;
+  height: 62vh;
   overflow-y: scroll;
 }
+
+.messages__progress{
+  height: 58vh;
+  overflow-y: scroll;
+}
+
 
 /* message form */
  .message__form{
@@ -31,4 +37,18 @@ body,
   border-left: 2px solid orange;
   padding-left: 8px;
   /* float: right; */
+}
+
+.message__image{
+  padding: 1em;
+}
+
+/* progress bar */
+.progress__bar{
+  margin:0 0 0 0 !important;
+}
+
+/*sidepane.js- menu */
+.menu{
+  padding-bottom: 2em;
 }
