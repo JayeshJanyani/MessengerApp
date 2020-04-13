@@ -7,7 +7,7 @@ const isOwnMessage = (message, user) => {
 }
 
 const timeFromNow = (timestamp) => {
-    moment(timestamp).fromNow()
+    return moment(timestamp).fromNow()
 }
 
 const isImage = message => {
@@ -15,7 +15,7 @@ const isImage = message => {
 }
 
 function Message({ message, user }) {
-    console.log(message)
+    // console.log(message)
     return (
         <Comment>
             <Comment.Avatar src={message.user.avatar} />

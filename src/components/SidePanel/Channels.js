@@ -18,6 +18,7 @@ class Channels extends Component {
             modal: false,
             firstLoad: true,
             activeChannel: '',
+            typingRef: firebase.database().ref('typing'),
             channelRef: firebase.database().ref('channels'),
             messagesRef: firebase.database().ref('messages'),
             notifications: []
@@ -43,7 +44,7 @@ class Channels extends Component {
         //this will look for every channel that is newly added to the channelsRef
         this.state.channelRef.on('child_added', snap => {
             loadedChannels.push(snap.val())
-            console.log(loadedChannels)
+            // console.log(loadedChannels)
             this.setState({ channels: loadedChannels },
                 () => this.setFirstChannel())
 
@@ -180,6 +181,9 @@ class Channels extends Component {
     changeChannel = channel => {
         // this.props.setCurrentChannel(channel)
         this.setActiveChannel(channel)
+        this.state.typingRef
+        .child(this.state.channel.id)
+        .child(this.state.user.uid).remove()
         this.props.setCurrentChannel(channel)
         this.props.setPrivateChannel(false)
         this.setState({ channel })
