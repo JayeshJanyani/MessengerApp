@@ -8,7 +8,7 @@ class MessagesHeader extends Component {
         return (
             <Segment clearing>
                 {/*Channel title */}
-                <Header fluid="true" as="h2" floated="left"
+                <Header fluid as="h2" floated="left"
                     style={{ marginBottom: 0 }}>
                     <span>
                         {channelName}
