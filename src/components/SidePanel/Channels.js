@@ -222,8 +222,9 @@ class Channels extends Component {
                     ({channels.length}) <Icon name="add"
                             onClick={this.openModal} />
                     </Menu.Item>
-
+                    <div className="channelScrollMenu">
                     {this.displayChannels(channels)}
+                    </div>
                 </Menu.Menu>
 
                 {/*Add channel Model*/}

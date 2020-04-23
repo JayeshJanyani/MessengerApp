@@ -111,13 +111,14 @@ class DirectMessages extends Component {
     render() {
         const { users,activeChannel } = this.state
         return (
-            <Menu.Menu className="menu">
+            <Menu.Menu className="directmsg">
                 <Menu.Item>
                     <span>
                         <Icon name="mail" /> DIRECT MESSAGES
                 </span> {'  '}
                 ({users.length})
                 </Menu.Item>
+                <div className="scrollMenu">
                 {/*Users to send direct messages */}
                 {users.map(user => (
                     <Menu.Item
@@ -130,6 +131,7 @@ class DirectMessages extends Component {
                         />
                         @{user.name}</Menu.Item>
                 ))}
+                </div>
             </Menu.Menu>
 
         )
